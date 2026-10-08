@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import MentorCard from '../components/MentorCard.jsx'
 import VideoThumb from '../components/VideoThumb.jsx'
 import Img from '../components/Img.jsx'
@@ -41,7 +42,7 @@ export default function Home() {
             <h1>Growth Mentorship Programme</h1>
             <p>Through its Growth Mentorship programme, Trellis Foundation connects young people with mentors who support them in exploring their interests, building their networks and growing in their careers. Mentors and mentees meet to get to know each other, discuss their goals and take meaningful steps towards their growth.</p>
             <div className="btns">
-              <a className="btn" href="#">Learn More</a>
+              <Link className="btn" to="/about">Learn More</Link>
               <a
                 className="donate"
                 href="/signin"
@@ -90,7 +91,7 @@ export default function Home() {
             <h2>Real Growth, Real Impact.</h2>
             <p>We track how the programme is growing so we can see what works. From mentor matches to meetups, every number represents a young person getting closer to their goals.</p>
             <p>Feedback from mentors and mentees helps us keep improving the experience for everyone.</p>
-            <div className="btns"><a className="btn" href="#">Learn More</a></div>
+            <div className="btns"><Link className="btn" to="/about">Learn More</Link></div>
           </div>
         </div>
       </section>
