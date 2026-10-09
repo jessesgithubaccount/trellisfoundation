@@ -1,5 +1,3 @@
-// One team card: photo (or initials if there is no photo yet),
-// with the name and role underneath.
 export default function TeamCard({ name, role, photo }) {
   const initials = name
     .split(' ')

@@ -3,7 +3,6 @@ import Img from '../components/Img.jsx'
 import SessionBlocks from '../components/SessionBlocks.jsx'
 import { findSession } from '../data/sessions.js'
 
-// One full session recap. The web address /sessions/some-slug picks the recap.
 export default function SessionPost() {
   const { slug } = useParams()
   const session = findSession(slug)

@@ -3,8 +3,6 @@ import Img from '../components/Img.jsx'
 import SessionBlocks from '../components/SessionBlocks.jsx'
 import { findProgramme } from '../data/programme.js'
 
-// One "Our Programme" page. The web address /programme/who-is-a-mentor picks the page.
-// It looks just like a session recap, so it reuses the same styles and the same SessionBlocks reader.
 export default function ProgrammePage() {
   const { slug } = useParams()
   const page = findProgramme(slug)

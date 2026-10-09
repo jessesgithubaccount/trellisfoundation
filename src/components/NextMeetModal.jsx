@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom'
 import { NEXT_MEETING } from '../data/meeting.js'
 import { downloadIcs, formatMeetingDate, googleCalendarUrl, isUpcoming, outlookCalendarUrl } from '../lib/calendar.js'
 
-// The pop-up shown by the "Next Meet" button.
 export default function NextMeetModal({ onClose }) {
   const closeRef = useRef(null)
   const upcoming = isUpcoming(NEXT_MEETING)

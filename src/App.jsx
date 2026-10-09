@@ -9,7 +9,6 @@ import ProgrammePage from './pages/ProgrammePage.jsx'
 import SignIn from './pages/SignIn.jsx'
 import ScrollReveal from './components/ScrollReveal.jsx'
 
-// Whenever the page (the "room") changes, jump back to the top.
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
@@ -18,13 +17,6 @@ function ScrollToTop() {
   return null
 }
 
-// The router is like the signs on the doors of a building:
-//   "/"        -> Home room
-//   "/about"   -> About room
-//   "/sessions"       -> list of session recaps
-//   "/sessions/:slug" -> one full recap
-//   "/programme/:slug" -> one "Our Programme" page (e.g. Who Is A Mentor?)
-//   "/signin"  -> Sign In room (it has its own look, so no header/footer)
 export default function App() {
   return (
     <>

@@ -1,6 +1,4 @@
 import Img from './Img.jsx'
-
-// A picture with a red YouTube-style play button on top.
 export default function VideoThumb({ name, src }) {
   return (
     <div className="thumb">

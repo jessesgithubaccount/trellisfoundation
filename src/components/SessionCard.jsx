@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import Img from './Img.jsx'
 
-// One recap card in the grid. "featured" makes it the big one at the top.
 export default function SessionCard({ session, featured = false }) {
   const { slug, number, date, title, summary, image, imagePosition, sample } = session
   return (

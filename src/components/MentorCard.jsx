@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
 
-// "props" are the order slip: { title, text, to } come from whoever uses <MentorCard />.
-// If "to" is given, "Read More" opens that page. If not, it stays a plain placeholder link.
 export default function MentorCard({ title, text, to }) {
   return (
     <div className="mcard">

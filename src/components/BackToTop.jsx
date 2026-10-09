@@ -4,8 +4,6 @@ export default function BackToTop() {
   // State: "should the button be visible?"
   const [show, setShow] = useState(false)
 
-  // Effect: while this button exists, listen to scrolling.
-  // The function we return is the "clean-up" - it removes the listener when we leave.
   useEffect(() => {
     function onScroll() {
       setShow((window.pageYOffset || document.documentElement.scrollTop) > 400)

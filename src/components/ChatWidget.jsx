@@ -2,7 +2,6 @@ import { useAuth } from '../context/AuthContext.jsx'
 import { useChat } from '../context/ChatContext.jsx'
 import ChatPanel from './ChatPanel.jsx'
 
-// Shows EITHER the round "Chat" button OR the open chat panel.
 export default function ChatWidget() {
   const { user } = useAuth()
   const { isOpen, openChat, closeChat } = useChat()

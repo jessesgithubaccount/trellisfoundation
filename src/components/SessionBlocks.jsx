@@ -1,8 +1,3 @@
-// Turns a session's "blocks" (see data/sessions.js) into real page content.
-// Think of it like a person reading a recipe card line by line: for each
-// block it checks what kind it is (paragraph, quote, list...) and draws it.
-
-// One list item: plain text, or { t, d } (title + description), or { t, sub } (with a smaller list).
 function Item({ item }) {
   if (typeof item === 'string') return <li>{item}</li>
   return (

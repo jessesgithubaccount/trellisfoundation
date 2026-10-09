@@ -1,5 +1,3 @@
-// The four social icons. Used in the top bar AND the footer (write once, use twice!).
-// "gradientId" must be different each time so the two Instagram gradients don't clash.
 export default function SocialIcons({ gradientId }) {
   return (
     <>

@@ -12,21 +12,17 @@ const signature = (list) => list.length + ':' + (list.length ? list[list.length 
 export default function ChatPanel({ onClose }) {
   const { user, signOut } = useAuth()
 
-  // State = the things this panel needs to remember.
   const [messages, setMessages] = useState([])
   const [text, setText] = useState('')
-  const [pending, setPending] = useState(null) // an image waiting to be sent
+  const [pending, setPending] = useState(null) 
   const [emojiOpen, setEmojiOpen] = useState(false)
-  const [lightbox, setLightbox] = useState(null) // a big image being viewed
+  const [lightbox, setLightbox] = useState(null) 
 
-  // Refs = a handle on a real element on the page (or a value that doesn't redraw the screen).
   const msgsRef = useRef(null)
   const inputRef = useRef(null)
   const fileRef = useRef(null)
   const stickToBottom = useRef(true)
 
-  // Effect 1: load messages now, then check again every 4 seconds
-  // and whenever another browser tab saves a message.
   useEffect(() => {
     let alive = true
     async function load() {
@@ -46,7 +42,6 @@ export default function ChatPanel({ onClose }) {
     }
   }, [])
 
-  // Effect 2: when new messages arrive, scroll down (if you were already near the bottom).
   const lastId = messages.length ? messages[messages.length - 1].id : ''
   useEffect(() => {
     const el = msgsRef.current
@@ -58,7 +53,6 @@ export default function ChatPanel({ onClose }) {
     stickToBottom.current = el.scrollHeight - el.scrollTop - el.clientHeight < 80
   }
 
-  // Effect 3: the Escape key closes the big image first, then the chat.
   useEffect(() => {
     function onKey(e) {
       if (e.key !== 'Escape') return
@@ -115,7 +109,6 @@ export default function ChatPanel({ onClose }) {
     if (fileRef.current) fileRef.current.value = ''
   }
 
-  // Shrinks the chosen picture (max 800px) so it fits in browser storage.
   function onFileChosen(e) {
     const file = e.target.files[0]
     if (!file) return
@@ -168,8 +161,7 @@ export default function ChatPanel({ onClose }) {
             {messages.length === 0 ? (
               <div className="tc-empty">No messages yet. Be the first to say hello! 👋</div>
             ) : (
-              // .map() turns a list of data into a list of things on screen.
-              // "key" helps React tell the items apart.
+
               messages.map((m, i) => {
                 const newDay = i === 0 || new Date(m.ts).toDateString() !== new Date(messages[i - 1].ts).toDateString()
                 return (

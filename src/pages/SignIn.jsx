@@ -10,7 +10,6 @@ const EYE_OFF = (
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /><path d="M4 4l16 16" /></svg>
 )
 
-// The words that change depending on the mode: 'in' | 'up' | 'reset'
 const COPY = {
   in: {
     title: 'Welcome Back to Trellis',
@@ -35,11 +34,9 @@ export default function SignIn() {
   const navigate = useNavigate()
   const location = useLocation()
 
-  // Where to go after signing in (the page the visitor came from).
   const cameFrom = location.state?.from
   const backTo = cameFrom && cameFrom !== '/signin' ? cameFrom : '/'
 
-  // One piece of state for each thing the form needs to remember.
   const [mode, setMode] = useState('in')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -49,7 +46,6 @@ export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false)
   const [message, setMessage] = useState(null) // { text, ok }
 
-  // Already signed in? Nothing to do here - go back.
   if (user) return <Navigate to={backTo} replace />
 
   const isUp = mode === 'up'
@@ -84,7 +80,6 @@ export default function SignIn() {
       return
     }
 
-    // Signed in! Open the chat and go back to the page we came from.
     setIsOpen(true)
     navigate(backTo)
   }

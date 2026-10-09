@@ -4,7 +4,6 @@ import VideoThumb from '../components/VideoThumb.jsx'
 import Img from '../components/Img.jsx'
 import { useChat } from '../context/ChatContext.jsx'
 
-// Data kept separate from the layout, so the cards are easy to edit.
 const MENTOR_CARDS = [
   {
     title: 'Who Is A Mentor?',

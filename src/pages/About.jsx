@@ -1,10 +1,8 @@
 import Img from '../components/Img.jsx'
 import TeamCard from '../components/TeamCard.jsx'
 
-// Paste your YouTube link here (e.g. 'https://www.youtube.com/watch?v=...').
 const VIDEO_URL = '#'
 
-// Content lives here, away from the layout, so it is easy to edit.
 const FEATURES = [
   {
     title: 'Connect With Mentors',
@@ -24,8 +22,6 @@ const FEATURES = [
   },
 ]
 
-// Add more people by adding lines here. Add a "photo" (e.g. '/assets/tony.webp')
-// to any entry and the picture shows instead of the initials.
 const TEAM = [
   { name: 'Tony Muiyuro', role: 'Founder', photo: '/assets/tony.webp' },
   { name: 'Michael', role: 'Team Lead', photo: '/assets/michael.webp' },

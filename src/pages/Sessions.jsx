@@ -4,7 +4,6 @@ import { SESSIONS } from '../data/sessions.js'
 
 const KEY = 'trellis-sessions-view'
 
-// Remember the visitor's choice (storage can be blocked, so never let it break the page).
 function getSavedView() {
   try {
     return localStorage.getItem(KEY) === 'grid' ? 'grid' : 'list'

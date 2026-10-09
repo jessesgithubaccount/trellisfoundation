@@ -2,23 +2,17 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import NextMeetModal from './NextMeetModal.jsx'
 
-// NavLink is a Link that knows if it points to the page you're on.
-// We use that to give the current page's link the "on" style (the underline).
 const navClass = ({ isActive }) => (isActive ? 'on' : '')
 
 export default function Header() {
-  // State: is the "Next Meet" pop-up open?
   const [meetOpen, setMeetOpen] = useState(false)
-  // State: is the mobile menu (hamburger) open?
   const [menuOpen, setMenuOpen] = useState(false)
   const { pathname } = useLocation()
 
-  // Close the menu whenever the page changes.
   useEffect(() => {
     setMenuOpen(false)
   }, [pathname])
 
-  // While the menu is open: Escape closes it, and so does growing the window to desktop size.
   useEffect(() => {
     if (!menuOpen) return
     const onKey = (e) => e.key === 'Escape' && setMenuOpen(false)
