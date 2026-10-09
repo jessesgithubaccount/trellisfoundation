@@ -1967,41 +1967,7 @@ body.on-signin .tc-tab {
 /* ABOUT PAGE: TEAM SECTION */
 
 .ab-team {
-  background: linear-gradient(
-    135deg,
-    #dff2e8 0%,
-    #eaf5ef 45%,
-    #d9ecf7 100%
-  );
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.ab-team::before,
-.ab-team::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  z-index: -1;
-  pointer-events: none;
-}
-
-.ab-team::before {
-  width: 300px;
-  height: 300px;
-  left: calc(50% - 300px);
-  top: 300px;
-  background: rgba(12, 140, 90, 0.7);
-}
-
-.ab-team::after {
-  width: 280px;
-  height: 280px;
-  left: calc(50% + 20px);
-  top: 340px;
-  background: rgba(70, 140, 230, 0.65);
+  background: var(--tint);
 }
 
 .ab-team .wrap > p {
@@ -2018,70 +1984,30 @@ body.on-signin .tc-tab {
   margin-top: 48px;
 }
 
-.team-grid::before {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  left: calc(50% - 60px);
-  top: -30px;
-  background: rgba(255, 160, 60, 0.55);
-  filter: blur(55px);
-  z-index: -1;
-  pointer-events: none;
-}
-
 .team-card {
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.45),
-    rgba(255, 255, 255, 0.12)
-  );
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
-  backdrop-filter: blur(22px) saturate(180%);
-  border: 1.5px solid rgba(255, 255, 255, 0.75);
-  border-radius: 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
   padding: 0;
   position: relative;
   overflow: hidden;
-  text-align: center;
-  box-shadow:
-    0 10px 40px rgba(19, 42, 84, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.3);
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(19, 42, 84, 0.06);
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease;
-}
-
-@supports not (
-  (backdrop-filter: blur(1px)) or
-  (-webkit-backdrop-filter: blur(1px))
-) {
-  .team-card {
-    background: rgba(255, 255, 255, 0.9);
-  }
+    box-shadow 0.3s ease;
 }
 
 .team-card:hover {
-  transform: translateY(-6px);
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.55),
-    rgba(255, 255, 255, 0.2)
-  );
-  box-shadow:
-    0 16px 48px rgba(19, 42, 84, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(19, 42, 84, 0.14);
 }
 
 .team-photo {
   height: 280px;
   border-radius: 0;
   overflow: hidden;
-  background: linear-gradient(160deg, #9fd3b9, #4fa87f);
+  background: var(--navy);
   display: grid;
   place-items: center;
 }
@@ -2101,7 +2027,8 @@ body.on-signin .tc-tab {
 }
 
 .team-tag {
-  padding: 18px 12px 20px;
+  padding: 16px 18px 18px;
+  border-top: 3px solid var(--orange);
 }
 
 .team-tag b {
