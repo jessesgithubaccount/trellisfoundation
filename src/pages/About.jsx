@@ -1,7 +1,4 @@
-import Img from '../components/Img.jsx'
 import TeamCard from '../components/TeamCard.jsx'
-
-const VIDEO_URL = '#'
 
 const FEATURES = [
   {
@@ -25,6 +22,8 @@ const FEATURES = [
 const TEAM = [
   { name: 'Tony Muiyuro', role: 'Founder', photo: '/assets/tony.webp' },
   { name: 'Michael', role: 'Team Lead', photo: '/assets/michael.webp' },
+  { name: 'Randy Mbugua', role: 'Photo Coverage', photo: '/assets/randy.webp' },
+  { name: 'Mark Paul & Jesse', role: 'Engineering Team', photo: '/assets/engineering.webp' },
 ]
 
 export default function About() {
@@ -61,21 +60,6 @@ export default function About() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="ab-media">
-            <div className="ab-big">
-              <Img name="about-main" src="/assets/act-bg.webp" alt="A mentor reaching out a hand to help a mentee up" />
-            </div>
-            <a className="ab-video" href={VIDEO_URL} target="_blank" rel="noopener noreferrer" aria-label="Watch the video on YouTube">
-              <Img name="about-video" src="/assets/hero.webp" style={{ objectPosition: '50% 40%' }} alt="" />
-              <span className="ab-play" aria-hidden="true">
-                <svg viewBox="0 0 68 48">
-                  <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.3 34 .3 34 .3S12.8.3 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#f00" />
-                  <path d="M27 34.3 44.7 24 27 13.7z" fill="#fff" />
-                </svg>
-              </span>
-            </a>
           </div>
         </div>
       </section>

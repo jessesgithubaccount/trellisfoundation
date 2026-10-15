@@ -9,6 +9,7 @@
 //   { ol: [ ...items ] }   a numbered list
 //   { ul: [ ...items ] }   a bulleted list
 //   { key: 'A highlighted key idea' }
+//   { img: '/assets/file.webp', alt: 'Describe the picture' }   a picture
 // A list item is either plain text, or { t: 'Title', d: 'Description' },
 // or { t: 'Title', sub: ['smaller item', 'smaller item'] }.
 //
@@ -87,6 +88,7 @@ export const SESSIONS = [
         h: 'Reading',
         blocks: [
           { p: 'The recommended reading is Mindset by Carol Dweck.' },
+          { img: '/assets/mindset-book.webp', alt: 'Cover of Mindset: The New Psychology of Success by Carol S. Dweck, Ph.D.' },
           { p: 'The book was recommended as part of the continued personal development and learning within the mentorship.' },
         ],
       },

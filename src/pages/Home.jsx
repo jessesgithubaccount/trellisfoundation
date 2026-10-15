@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import MentorCard from '../components/MentorCard.jsx'
-import VideoThumb from '../components/VideoThumb.jsx'
+import ContactForm from '../components/ContactForm.jsx'
 import Img from '../components/Img.jsx'
-import { useChat } from '../context/ChatContext.jsx'
 
 const MENTOR_CARDS = [
   {
@@ -23,15 +22,13 @@ const MENTOR_CARDS = [
 ]
 
 const STATS = [
-  { value: '60', label: 'Mentees', left: 60, top: 0 },
-  { value: '24', label: 'Mentors', left: 0, top: 110 },
+  { value: '30+', label: 'Mentees', left: 60, top: 0 },
+  { value: '1', label: 'Mentor', left: 0, top: 110 },
   { value: '10+', label: 'Meetups', left: 200, top: 120 },
-  { value: '120', label: 'Sessions', left: 80, top: 200 },
+  { value: '10+', label: 'Sessions', left: 80, top: 200 },
 ]
 
 export default function Home() {
-  const { openChat } = useChat()
-
   return (
     <>
       <section className="hero">
@@ -42,16 +39,6 @@ export default function Home() {
             <p>Through its Growth Mentorship programme, Trellis Foundation connects young people with mentors who support them in exploring their interests, building their networks and growing in their careers. Mentors and mentees meet to get to know each other, discuss their goals and take meaningful steps towards their growth.</p>
             <div className="btns">
               <Link className="btn" to="/about">Learn More</Link>
-              <a
-                className="donate"
-                href="/signin"
-                onClick={(e) => {
-                  e.preventDefault()
-                  openChat()
-                }}
-              >
-                Sign In
-              </a>
             </div>
           </div>
           <div className="pic">
@@ -66,7 +53,7 @@ export default function Home() {
         <div className="wrap center">
           <span className="tag">Our Mission</span>
           <h2>Grow With Guidance.</h2>
-          <p style={{ fontSize: 12 }}>Many young people have the talent and ambition to succeed but lack someone who has walked the path before them. Our Growth Mentorship Programme pairs mentees with experienced mentors who offer guidance, open doors and help them take confident next steps.</p>
+          <p style={{ fontSize: 12 }}>Many young people have the talent and ambition to succeed but lack a mentor. Our Growth Mentorship Programme offers guidance and helps young people take confident next steps.</p>
           <div className="cards3">
             {MENTOR_CARDS.map((card) => (
               <MentorCard key={card.title} title={card.title} text={card.text} to={card.to} />
@@ -108,23 +95,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="msg">
         <div className="wrap">
-          <div className="center">
-            <span className="tag">Testimonials</span>
-            <h2>Hear From Our Mentors And Mentees.</h2>
-            <p style={{ fontSize: 12 }}>Read how the programme has helped young people explore their interests, build connections and take meaningful steps in their careers.</p>
-          </div>
-          <div className="tm">
-            <VideoThumb name="testimonial" src="/assets/testimonial.webp" />
-            <div>
-              <div className="who">
-                <Img className="who-photo" name="tony" src="/assets/tony.webp" alt="Tony Muiyuro" />
-                <div><b>Tony Muiyuro</b><small>Mentor</small></div>
-              </div>
-              <blockquote>Meeting my mentee each month has been rewarding. Seeing them set goals and reach them makes every conversation worthwhile.</blockquote>
-              <div className="dots"><i></i><i></i><i></i></div>
+          <div className="msg-card">
+            <div className="msg-info">
+              <span className="tag">Contact Us</span>
+              <h2>Send Us A Message.</h2>
+              <p>Have a question about the programme, becoming a mentor or joining as a mentee? Send us a message and we will get back to you.</p>
             </div>
+            <ContactForm />
           </div>
         </div>
       </section>

@@ -3,7 +3,6 @@ import TopBar from './TopBar.jsx'
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import BackToTop from './BackToTop.jsx'
-import ChatWidget from './ChatWidget.jsx'
 
 export default function Layout() {
   return (
@@ -14,7 +13,6 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
-      <ChatWidget />
       <BackToTop />
     </>
   )

@@ -20,6 +20,7 @@ function Block({ block }) {
   if (block.p) return <p>{block.p}</p>
   if (block.quote) return <blockquote className="ss-quote">{block.quote}</blockquote>
   if (block.key) return <div className="ss-key">{block.key}</div>
+  if (block.img) return <img className="ss-img" src={block.img} alt={block.alt || ''} loading="lazy" />
   if (block.ol)
     return (
       <ol className="ss-list-items">
